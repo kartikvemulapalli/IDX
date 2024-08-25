@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>IDX</title>
+</head>
+<script>
+    function validateForm() {
+    
+        var pw1 = document.getElementById("pswd1").value;
+        var pw2 = document.getElementById("pswd2").value;
+        if(pw1 == pw2) {
+          alert("login successfully");
+          location.replace("index.html")
+          return false;
+        } else {
+          alert("Passwords are not same! Retry with new Password");
+      }
+     }
+    </script>
+<body>
+     
+      <div class="main">
+            <h1>REGISTER</h1>
+           
+            <form onsubmit ="return validateForm()">
+                  <label for="first">
+                        Username:
+                  </label>
+                  <input type="text" 
+                         name="first" 
+                         placeholder="Enter your Username" required>
+                  <label for="password">
+                        Password:
+                  </label>
+                  <input type="password"
+                         id="pswd1"
+                         placeholder="Enter your Password" required>
+                         
+                    <label for="password">
+                             Repeat Password:
+                      </label>
+                      <input type="password"
+                             id="pswd2"
+                             placeholder="Enter your repeated Password" required>
+                            
+                  <div>
+                        <button type="submit" >
+                              Submit
+                        </button>
+                        <button type="reset"> reset </button>
+                    </div>
+            </form>
+            <p>Already registered?
+                  <a href="login.html">
+                        Login
+                  </a>
+            </p>
+      </div>
+</body>
+</html>
